@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax Form Serj Belousov</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="jquery.sendFormLP.js"></script>
+
+	<style>
+		input{
+			padding: 4px 10px;
+		}
+		.error{
+			border-color: red;
+		}
+	</style>
+</head>
+<body>	
+	<div class="modal fade" id="myModalBiggerWindow" role="dialog">
+		<div class="modal-dialog">
+
+			
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<p>Ваше повідомлення відправлено</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" style="color:white">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+<!-- 
+	<div class="formForContact">
+
+		<form class="formContactBiggest">
+  
+		  <fieldset>
+			<p class="titleForm"><b>НАПИШІТЬ НАМ</b></p>
+			<label for="nameBigWindows">П.І.П.:</label>
+			<input id="nameBigWindows" type="text" name="name" placeholder="П.І.П." required />
+			<br><br>
+			<label for="numberBigWindows"> Номер телефону:</label>
+			<input id="numberBigWindows" type="tel" name="number" value="+380" required />
+			<br><br>
+			<label for="emailBigWindows"> Електронна пошта:</label>
+			<input id="emailBigWindows" type="email" name="email" placeholder="e-mail" required />
+			<br><br>
+			<textarea rows="6" id="textBigWindows" name="text" placeholder="Text" required></textarea>
+			<br><br>
+			<br>
+		  </fieldset>
+		  <div class="send">
+			<input type="submit" class="button" name="ВІДПРАВИТИ" value="ВІДПРАВИТИ" />
+		  </div>
+		</form>
+	  </div> -->
+	  <div class="formForContact">
+	<form action="sendmail.php" data-them="Зворотня Форма Зв'язку Security-PRO" data-show="#myModalBiggerWindow" class="formContactBiggest">
+		<fieldset>
+			<p class="titleForm"><b>НАПИШІТЬ НАМ</b></p>
+			<label for="nameBigWindows">П.І.П.:</label>
+			<input id="nameBigWindows" data-name="Ім'я: " type="text" name="name" placeholder="П.І.П." required>
+			<br><br>
+			<label for="numberBigWindows"> Номер телефону:</label>
+			<input id="numberBigWindows" type="tel" name="phone"  value="+380" data-name="Телефон: " data-required>
+			<br><br>			
+			<label for="emailBigWindows"> Електронна пошта:</label>
+			<input id="emailBigWindows" type="email" name="email" data-name="E-mail: " placeholder="e-mail" required >
+			<br><br>
+			<textarea rows="6" id="textBigWindows" type="text" name="mes" placeholder="Text" data-name="Повідомлення: " data-required></textarea>
+			<br><br>
+			<br>
+		</fieldset>
+		<div class="send">
+			<input type="submit" class="button" data-name="Відправилено з сайту" value="ВІДПРАВИТИ">
+		</div>
+		</form>
+	</div>
+
+	<!-- <div class="thank" style="display:none;">Отпрвленно!</div> -->
+	
+
+
+	
+</body>
+</html>
